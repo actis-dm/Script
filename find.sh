@@ -20,12 +20,12 @@ find /$catalog1 -name $name -print
 echo "Хотите продолжить? (yes/no)"
 read again
 else
-echo "Ошибка!Такого файла в данном каталоге не существует"
+echo "$(tput setaf 1)Ошибка!Такого файла в данном каталоге не существует$(tput setaf 0)"
 echo "Хотите продолжить? (yes/no)"
 read again
 fi
 else
-echo "Ошибка!Такого каталога не существует"
+echo "$(tput setaf 1)Ошибка!Такого каталога не существует$(tput setaf 0)"
 echo "Хотите продолжить? (yes/no)"
 read again
 fi
@@ -40,12 +40,12 @@ find /$catalog2 -size $size -print
 echo "Хотите продолжить? (yes/no)"
 read again
 else 
-echo "Ошибка!Такого каталога не существует"
+echo "$(tput setaf 1)Ошибка!Такого каталога не существует$(tput setaf 0)"
 echo "Хотите продолжить? (yes/no)"
 read again
 fi
 ;;
-*)echo "Ошибка!Поиск по такому запросу не может быть осуществлен"
+*)echo "$(tput setaf 1)Ошибка!Поиск по такому запросу не может быть осуществлен$(tput setaf 0)"
 echo "Хотите продолжить? (yes/no)"
 read again
 esac
