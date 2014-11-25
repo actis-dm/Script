@@ -14,7 +14,7 @@ if test -d /$catalog1
 then
 echo "Введите имя файла"
 read name
-if test -f $name
+if [ -f $name ]
 then
 find /$catalog1 -name $name -print
 echo "Хотите продолжить? (yes/no)"
@@ -32,7 +32,7 @@ fi
 ;;
 size)echo "Введите каталог, в котором нужно найти файл"
 read catalog2
-if test -d /$catalog2
+if [ -d /$catalog2 ]
 then
 echo "Введите размер файла(k,b)"
 read size
